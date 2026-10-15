@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-user-input',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './user-input.html',
   styleUrl: './user-input.css',
 })
-export class UserInput {}
+export class UserInput {
+
+  onSubmit() {
+
+  }
+}
