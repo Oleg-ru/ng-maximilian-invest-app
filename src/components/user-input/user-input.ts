@@ -9,7 +9,7 @@ import { InvestmentService } from '../../services/investment-service';
   styleUrl: './user-input.css',
 })
 export class UserInput {
-  investmentService = inject(InvestmentService);
+  private investmentService = inject(InvestmentService);
 
   enteredInitialInvestment = signal('0');
   enteredAnnualInvestment = signal('0');
