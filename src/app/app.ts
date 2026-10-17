@@ -1,24 +1,27 @@
 import { Component } from '@angular/core';
 import { Header } from '../components/header/header';
 import { UserInput } from '../components/user-input/user-input';
-import { InvestmentInput } from '../investment-input.model';
+import { AnnualInvestmentResult, InvestmentInput } from '../investment-input.model';
+import { InvestmentResults } from '../components/investment-results/investment-results';
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [Header, UserInput],
+  imports: [Header, UserInput, InvestmentResults],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
+  results: AnnualInvestmentResult[] | null = null;
+
   onCalculateInvestmentResults({
     initialInvestment,
     duration,
     expectedReturn,
     annualInvestment,
   }: InvestmentInput) {
-    const annualData = [];
+    const annualData: AnnualInvestmentResult[] = [];
     let investmentValue = initialInvestment;
 
     for (let i = 0; i < duration; i++) {
@@ -36,6 +39,6 @@ export class App {
       });
     }
 
-    console.log(annualData);
+    this.results = annualData;
   }
 }
