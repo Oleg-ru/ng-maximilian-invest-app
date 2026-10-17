@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import { Header } from '../components/header/header';
 import { UserInput } from '../components/user-input/user-input';
+import { InvestmentInput } from '../investment-input.model';
 
-export interface InvestmentInput {
-  initialInvestment: number;
-  duration: number;
-  expectedReturn: number;
-  annualInvestment: number;
-}
+
 
 @Component({
   selector: 'app-root',

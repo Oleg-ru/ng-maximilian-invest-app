@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { InvestmentInput } from '../../app/app';
+import { InvestmentInput } from '../../investment-input.model';
 
 @Component({
   selector: 'app-user-input',
@@ -21,6 +21,6 @@ export class UserInput {
       annualInvestment: Number(this.enteredAnnualInvestment),
       expectedReturn: Number(this.enteredExpectedReturn),
       duration: Number(this.enteredDuration),
-    })
+    });
   }
 }
