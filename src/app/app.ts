@@ -8,7 +8,7 @@ import { InvestmentResults } from '../components/investment-results/investment-r
 
 @Component({
   selector: 'app-root',
-  imports: [Header, UserInput, InvestmentResults],
+  imports: [Header, UserInput, InvestmentResults, InvestmentResults],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
