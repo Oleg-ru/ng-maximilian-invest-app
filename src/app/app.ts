@@ -4,8 +4,6 @@ import { UserInput } from '../components/user-input/user-input';
 import { AnnualInvestmentResult, InvestmentInput } from '../investment-input.model';
 import { InvestmentResults } from '../components/investment-results/investment-results';
 
-
-
 @Component({
   selector: 'app-root',
   imports: [Header, UserInput, InvestmentResults, InvestmentResults],
