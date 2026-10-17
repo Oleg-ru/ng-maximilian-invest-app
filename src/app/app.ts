@@ -16,7 +16,7 @@ export interface InvestmentInput {
   styleUrl: './app.css',
 })
 export class App {
-  calculateInvestmentResults({
+  onCalculateInvestmentResults({
     initialInvestment,
     duration,
     expectedReturn,
@@ -40,6 +40,6 @@ export class App {
       });
     }
 
-    return annualData;
+    console.log(annualData);
   }
 }
